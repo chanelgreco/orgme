@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 const ActivityDisplayer = ({ reports, removeReport }) => {
   console.log(reports);
@@ -10,9 +11,12 @@ const ActivityDisplayer = ({ reports, removeReport }) => {
             <p>Date: {report.date}</p>
             <p>Activity: {report.activity}</p>
             <p>Duration: {report.duration}</p>
-            <button onClick={() => removeReport(report.id)}>
+            <Button
+              variant="contained"
+              className="button"
+              onClick={() => removeReport(report.id)}>
               Delete Report
-            </button>
+            </Button>
           </li>
         ))}
       </ul>

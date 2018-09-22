@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 const ActivityForm = ({
   date,
@@ -32,7 +33,9 @@ const ActivityForm = ({
             onChange={handleChange}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <Button variant="contained" color="primary" type="submit">
+          Submit
+        </Button>
       </form>
     </div>
   );
